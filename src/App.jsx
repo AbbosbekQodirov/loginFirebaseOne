@@ -6,15 +6,16 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import { AuthProvider } from './context/AuthContext';
+ import { ToastContainer, toast } from "react-toastify";
+ import "react-toastify/dist/ReactToastify.css";
 
 function App() {
 
   const { user, isReady } = useContext(AuthProvider);
-  console.log(user);
-  console.log(user);
 
   return (
     <div className="App">
+      <ToastContainer/>
       {isReady && (
         <BrowserRouter>
           <Navbar />

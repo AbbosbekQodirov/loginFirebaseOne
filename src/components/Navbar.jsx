@@ -2,12 +2,12 @@ import React, { useContext } from 'react'
 import { NavLink } from 'react-router-dom';
 import { AuthProvider } from '../context/AuthContext';
 import { projectAuth } from '../firebase/config';
+import { toast } from "react-toastify";
 
 function Navbar() {
 
   const { user, dispatch } = useContext(AuthProvider);
 
-  console.log("salom");
 
 
   return (
@@ -44,6 +44,7 @@ function Navbar() {
               dispatch({
                 type: "LOGOUT",
               });
+              toast("Log Out succesfully!")
             }}>
               Log out
             </button>{" "}

@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { projectAuth } from "../firebase/config";
 import { AuthProvider } from "../context/AuthContext";
+import {  toast } from "react-toastify";
 
 export function useLogin() {
 
@@ -22,6 +23,7 @@ export function useLogin() {
       });
 
      
+      toast.success("Login succesfully!");
       setIsPending(false);
     } catch (err) {
       setIsPending(false);
