@@ -11,6 +11,7 @@ function App() {
 
   const { user, isReady } = useContext(AuthProvider);
   console.log(user);
+  console.log(user);
 
   return (
     <div className="App">
